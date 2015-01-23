@@ -7,8 +7,8 @@ get '/survey/create' do
 end
 
 post '/survey/create' do
-  @survey = Survey.create #takes title and creator_id
-  # @question = Question.create(#blah #blah)
+  # @survey = Survey.new #takes title and creator_id
+  # @question = Question.new(#blah #blah)
   # @choice = Choice.create()
   # a loop that pushes choices into questions
   # @question.choices << @choice
