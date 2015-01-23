@@ -1,0 +1,24 @@
+Create a Survey
+<div id="create_survey">
+  <form action="/survey/create" method="POST">
+    <input type="text" name="survey[title]">
+    <input type="submit" id="title_submit_button">
+  </form>
+</div>
+
+<button class="add_question">Add Question</button>
+<div class="question">
+  <form action="">
+    <input type="text" name="survey[question]">
+  </form>
+</div>
+
+<button class="add_choice">Add Choice</button>
+
+<div class="choices">
+  <div class="choice">
+    Choice:<input type="text" name="choice">
+  </div>
+</div>
+
+
