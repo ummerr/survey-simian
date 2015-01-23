@@ -1,4 +1,4 @@
 class Choice < ActiveRecord::Base
   belongs_to :question
-  has_one :answer
+  has_many :answers
 end
