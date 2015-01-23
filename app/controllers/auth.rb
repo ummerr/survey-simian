@@ -1,5 +1,9 @@
 get '/' do
-  erb :welcome
+  if current_user
+    redirect '/surveys'
+  else
+    erb :welcome
+  end
 end
 
 get '/login' do
