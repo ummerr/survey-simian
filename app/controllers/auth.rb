@@ -7,7 +7,14 @@ get '/login' do
 end
 
 post '/login' do
+  user = User.find_by(name: params[:user][:name])
 
+  if user.try(:authenticate, params[:user][:password])
+    session[:user_id] = user.id
+    redirect '/survey'
+  else
+    redirect '/login'
+  end
 
 end
 
@@ -28,6 +35,7 @@ post '/signup' do
 end
 
 get '/logout' do
-
+  session[:user_id] = nil
+  redirect '/'
 end
 
