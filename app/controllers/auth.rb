@@ -8,6 +8,7 @@ end
 
 post '/login' do
 
+
 end
 
 get '/signup' do
@@ -15,6 +16,14 @@ get '/signup' do
 end
 
 post '/signup' do
+  user = User.create(params[:user])
+
+  if user.save
+    session[:user_id] = user.id
+    redirect '/survey'
+  else
+    redirect '/signup'
+  end
 
 end
 
