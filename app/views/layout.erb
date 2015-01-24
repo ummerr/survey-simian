@@ -11,8 +11,7 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-  <!-- Load Vollkorn font -->
-  <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400|Open+Sans+Condensed:300|Roboto+Slab:400' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -20,18 +19,17 @@
   <title></title>
 </head>
 <body>
+
 <div id="content">
-  <header>
-    <a href="/"><img src="https://s-media-cache-ak0.pinimg.com/236x/7c/b4/51/7cb451579ed86b42ed5b2f68f48a3260.jpg" class="logo"></a>
+  <div id="login-container">
     <div id="login-toolbar">
       <% if current_user %>
         <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
       <% end %>
-  </header>
+    </div>
+    <h1>SURVEY SIMIAN</h1>
   <%= yield %>
 </div>
+
 </body>
 </html>

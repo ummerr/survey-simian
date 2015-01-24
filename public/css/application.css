@@ -1,16 +1,47 @@
 /* CSS declarations go here */
-body {font-family: Futura; font-size: 160%; line-height: 160%; background-color: pink; }
-h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
-h1 {font-size: 1.8em;}
-h2 {font-size: 1.6em;}
-h3 {font-size: 1.4em;}
-h4 {font-size: 1.3em;}
-h5 {font-size: 1.2em;}
-h6 {font-size: 1.1em;}
+
+font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Roboto Slab', serif;
+
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;
+    line-height:100%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #000000;
+}
+
+h1 {
+    font-size: 1.8em;
+    width: 370px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
 p, pre, blockquote, table, ul, ol, dl {margin-top: .5em; margin-bottom: .5em;}
 ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
 li {margin: 0.3em auto;}
-ul {margin-left: .5em; padding-left: 0.5em;}
+ul {margin-left: .5em; padding-left: 0.5em; list-style-type: none;}
 dt {font-weight: bold;}
 img {border: none;}
 pre {border-left: 1px solid #ccc; margin-left: 0em; padding-left: 0.5em;}
@@ -28,24 +59,82 @@ del {text-decoration: line-through; color: #777777;}
 
 footer { font-size: 0.7em; margin-top: 2em;}
 
-#content { margin: 0 auto; padding: 0 1em; max-width: 37em; position: relative; width: 61.8%;}
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 160%;
+    line-height: 160%;
+    background-color: #ffffff;
+}
+
+
+#content{
+    width: 75%;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url("/img/animal3-rotated-lightened.png");
+    background-repeat: no-repeat;
+}
 
 a {
-    color: #36AECC;
+    color: #000;
     text-decoration: none;
 }
 
 a:visited {
-    color: #AAA;
+    color: #000;
 }
 
 a:hover {
-    color: #000;
+    color: #AAA;
     text-decoration: underline;
 }
 
-.logo {
-  height: 3em;
+#login-container {
+    width: 80%;
+    height: 100px;
+    position: fixed;
+    text-align: right;
+    margin: 0 20px 0 0;
+}
+
+#login-toolbar {
+    width: 200px;
+    float: right;
+}
+
+#login {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#signup {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#username{
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#password {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.submit {
+    width: 370px;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
 }
 
 code {
