@@ -16,7 +16,7 @@ post '/survey/create' do
   @survey.title = params[:title]
   question = Question.create(name: params[:question])
   @survey.questions << question
-  User.first.created_surveys << @survey   # session[:user_id]  ADD IN ONCE SESSIONS ARE ENABLED!!!!!
+  current_user.created_surveys << @survey
   choices = []
   params[:choices].each { |key, value| choices << Choice.create(name: value) }
   @survey.questions.first.choices << choices  # Only supports survey with one question, add functionality here to support multiple questions.
