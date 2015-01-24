@@ -2,6 +2,11 @@ get '/survey' do
   erb :'survey/main'
 end
 
+get '/survey/all' do
+  @surveys = Survey.all
+  erb :'survey/all'
+end
+
 get '/survey/create' do
   erb :'survey/create'
 end
@@ -24,5 +29,8 @@ get '/survey/:id' do
   erb :'survey/show'
 end
 
-
+post '/survey/:id' do
+  p params
+  erb :'survey/main'
+end
 
