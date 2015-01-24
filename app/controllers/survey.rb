@@ -24,6 +24,11 @@ post '/survey/create' do
   redirect("/survey/#{@survey.id}")
 end
 
+get '/survey/:id/results' do
+  @survey = Survey.find_by(id: params[:id])
+  erb :'survey/results'
+end
+
 get '/survey/:id' do
   @survey = Survey.find(params[:id])
   erb :'survey/show'
