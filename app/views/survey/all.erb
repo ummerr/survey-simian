@@ -1,0 +1,10 @@
+
+  <div class="survey">
+    <p>Please click a survey below</p>
+    <ul>
+      <% @surveys.each do |survey| %>
+        <li><a href="/survey/<%= survey.id %>"><%= survey.title %></a></li>
+      <% end %>
+    </ul>
+  </div>
+
