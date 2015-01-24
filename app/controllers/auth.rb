@@ -1,6 +1,6 @@
 get '/' do
   if current_user
-    redirect '/surveys'
+    redirect '/survey'
   else
     erb :welcome
   end
