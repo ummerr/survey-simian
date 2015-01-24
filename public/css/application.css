@@ -5,17 +5,16 @@ font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Roboto Slab', serif;
 
 
-h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;
+h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans Condensed', sans-serif;
     line-height:100%;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
     color: #000000;
 }
 
 h1 {
     font-size: 1.8em;
-    width: 370px;
-    margin: 0 auto;
+    font-family: 'Roboto Slab', serif;
 }
 
 h2 {
@@ -38,26 +37,6 @@ h6 {
     font-size: 1.1em;
 }
 
-p, pre, blockquote, table, ul, ol, dl {margin-top: .5em; margin-bottom: .5em;}
-ul ul, ul ol, ol ol, ol ul {margin-top: 0.5em; margin-bottom: 0.5em;}
-li {margin: 0.3em auto;}
-ul {margin-left: .5em; padding-left: 0.5em; list-style-type: none;}
-dt {font-weight: bold;}
-img {border: none;}
-pre {border-left: 1px solid #ccc; margin-left: 0em; padding-left: 0.5em;}
-blockquote {padding: 0.3em; background-color: #E8F2F5; margin-left:0.5em; margin-right:0;}
-th, td {border: 1px solid #ccc; padding: 0.3em;}
-th {background-color: #f0f0f0;}
-hr {border: none; border-top: 1px solid #E8F2F5; width: 100%;}
-del {text-decoration: line-through; color: #777777;}
-.toc li {list-style-type: none;}
-.todo {font-weight: bold; background-color: #f0ece8; color: #a03020;}
-.justleft {text-align: left;}
-.justright {text-align: right;}
-.justcenter {text-align: center;}
-.center {margin-left: auto; margin-right: auto;}
-
-footer { font-size: 0.7em; margin-top: 2em;}
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -73,6 +52,17 @@ body {
     margin: 0 auto;
     background-image: url("/img/animal3-rotated-lightened.png");
     background-repeat: no-repeat;
+}
+
+.title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title a:hover{
+    text-decoration: none;
+    color: #000;
 }
 
 a {
@@ -103,56 +93,75 @@ a:hover {
 }
 
 #login {
-    width: 370px;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
     padding-top: 200px;
 }
 
 #signup {
-    width: 370px;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
     padding-top: 30px;
 }
 
 #username{
-    width: 370px;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
     padding-top: 200px;
 }
 
 #password {
-    width: 370px;
+    width: 350px;
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
 }
 
 .submit {
-    width: 370px;
+    width: 350px;
     margin: 0 auto;
     padding-top: 20px;
     text-align: center;
 }
 
-code {
-    font-family: Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    padding: 0px 3px;
-    display: inline-block;
-    color: #52595d;
-    background-color: #E8F2F5;
-    font-size: 40%;
-    line-height: 1.4em;
-    margin-left: -1em;
-    overflow: auto;
+#survey-landing {
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+#create_survey {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.create-survey-left{
+    width: 55%;
+    float: left;
+    text-align: left;
+}
+
+.create-survey-right{
+    width: 30%;
+    float: right;
+    text-align: left;
+    padding-top: 43px;
+}
+
+.survey-list {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+li.surveys {
+    font-size: .8em;
 }
 
 .question {
@@ -161,10 +170,39 @@ code {
 
 .add_choice {
     visibility: hidden;
+    margin: 5px 0;
 }
 
 .choice {
-    visibility:hidden;
+    visibility: hidden;
 }
 
+.add_question {
+    margin: 5px 0;
+}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.question-choices {
+    font-size: .8em;
+}
+
+p {
+    margin: 1px;
+}
+
+#survey-questions {
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+
+input[type=radio] {
+    margin-right: 5px;
+    vertical-align: middle;
+    margin-top: -6px;
+}

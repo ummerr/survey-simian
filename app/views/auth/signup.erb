@@ -1,8 +1,16 @@
 <div id="signup_form">
   <form action="/signup" method="POST">
-    Name: <input type="text" name="user[name]"><br>
-    Password: <input type="password" name="user[password]"><br>
-    Confirm Password: <input type="password" name="user[password_confirmation]">
-    <input type="Submit">
+    <div id="username">
+      Name: <input type="text" name="user[name]">
+    </div>
+    <div id="password">
+      Password: <input type="password" name="user[password]">
+    </div>
+    <div id="password">
+      Confirm Password: <input type="password" name="user[password_confirmation]">
+    </div>
+    <div class="submit">
+      <input type="Submit">
+    </div>
   </form>
 </div>

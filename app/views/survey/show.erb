@@ -1,4 +1,6 @@
-<h1><%= @survey.title %></h1>
+<div class="title">
+  <h2><%= @survey.title %></h2>
+</div>
 
 <div id="survey-questions">
   <% @survey.questions.each do |question| %>
@@ -8,7 +10,7 @@
 
     <form action="/survey/<%=@survey.id%>" method="POST">
       <% question.choices.each do |choice| %>
-       <input type="radio" name="choice_id" value="<%= choice.id %>"><%= choice.name %><br>
+        <input type="radio" name="choice_id" value="<%= choice.id %>"><%= choice.name %><br>
       <% end %>
       <input type="hidden" name="survey_id" value="<%= @survey.id %>">
       <input type="hidden" name="question_id" value="<%= question.id %>">
