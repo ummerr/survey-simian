@@ -35,7 +35,6 @@ get '/survey/:id' do
 end
 
 post '/survey/:id' do
-  p params
-  erb :'survey/main'
+  answer = Answer.create(choice_id: params[:choice_id], user_id: current_user.id)
+  redirect("/survey/#{params[:survey_id]}/results")
 end
-
