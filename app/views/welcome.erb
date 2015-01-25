@@ -4,11 +4,13 @@
 
 <div class="login_form hidden">
   <form action="/login" method="POST">
-  User Name<input type="text" name="user[name]">
-  <br>
-  Password<input type="password" name="user[password]">
-  <br>
-  <input type="submit" value="login">
+    <div id="username">
+      User Name: <input type="text" name="user[name]">
+    </div>  
+    <div id="password">
+    Password: <input type="password" name="user[password]">
+    </div>
+    <input type="submit" value="Login">
   </form>
 </div>
 

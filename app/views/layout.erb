@@ -16,22 +16,24 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Survey Simian</title>
 </head>
-<body>
+  <body>
 
-<div id="content">
-  <div id="login-container">
-    <div id="login-toolbar">
-      <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% end %>
+    <div id="login-container">
+      <div id="login-toolbar">
+        <% if current_user %>
+          <a href="/logout">Logout</a>
+        <% end %>
+      </div>
     </div>
-    <div class="title">
-      <h1><a href="/">SURVEY SIMIAN</a></h1>
-    </div>
-  <%= yield %>
-</div>
 
-</body>
+    <div id="content">
+      <div class="title">
+        <h1><a href="/">SURVEY SIMIAN</a></h1>
+      </div>
+      <%= yield %>
+    </div>
+
+  </body>
 </html>
