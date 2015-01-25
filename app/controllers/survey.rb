@@ -12,15 +12,23 @@ get '/survey/create' do
 end
 
 post '/survey/create' do
+  p params
+  p params[:questions]  
   @survey = Survey.create
   @survey.title = params[:title]
-  questions = []
-  question = Question.create(name: params[:question])
-  @survey.questions << question
-  current_user.created_surveys << @survey
-  choices = []
-  params[:choices].each { |key, value| choices << Choice.create(name: value) }
-  @survey.questions.first.choices << choices  # Only supports survey with one question, add functionality here to support multiple questions.
+  # questions = []
+  # choices = []
+
+  params[:questions].each do |key, question|
+    @survey.questions << Question.create(name: question)
+    @survey.questions.last.choices << key[:choices].each { |key, choice| Choice.create(name: value) }
+  end
+  # question = Question.create(name: params[:question])
+  # @survey.questions << question
+  # current_user.created_surveys << @survey
+  # choices = []
+  # params[:choices].each { |key, value| choices << Choice.create(name: value) }
+  # @survey.questions.first.choices << choices  # Only supports survey with one question, add functionality here to support multiple questions.
 
   redirect("/survey/#{@survey.id}")
 end

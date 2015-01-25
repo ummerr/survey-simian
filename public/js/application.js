@@ -7,7 +7,7 @@ $(document).ready(function() {
     event.preventDefault();
 
       $('.questions').append("<div>Question: <input type='text' name=''</div>");
-      $('input').last().prop('name', "questions[question_" + questionCounter + "]");
+      $('input').last().prop('name', "question_" + questionCounter);
       $('.add_choice').css("visibility", "visible");
 
       questionCounter++;
@@ -17,7 +17,7 @@ $(document).ready(function() {
     event.preventDefault();
 
       $('.questions').append("<div>Choice: <input class='.choice' type='text' name=''</div>");
-      $('input').last().prop('name', "questions[question_" + (questionCounter-1) + "][choice_" + choiceCounter + "]");
+      $('input').last().prop('name', "question_" + (questionCounter-1) + "[choice_" + choiceCounter + "]");
 
       choiceCounter++;
 
