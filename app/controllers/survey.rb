@@ -13,15 +13,17 @@ end
 
 post '/survey/create' do
   p params
-  p params[:questions]  
+  # p params[:questions]  
   @survey = Survey.create
   @survey.title = params[:title]
   # questions = []
-  # choices = []
+  
 
-  params[:questions].each do |key, question|
-    @survey.questions << Question.create(name: question)
-    @survey.questions.last.choices << key[:choices].each { |key, choice| Choice.create(name: value) }
+  params[:questions].each do |question_num, question_value|
+    @survey.questions << Question.create(name: question_value)
+    choices = []
+    choices << params[:choices][question_num.to_sym].map { |key, choice| Choice.create(name: choice) }
+    @survey.questions.last.choices << choices
   end
   # question = Question.create(name: params[:question])
   # @survey.questions << question
