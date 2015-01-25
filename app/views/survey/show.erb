@@ -3,18 +3,28 @@
 </div>
 
 <div id="survey-questions">
-  <% @survey.questions.each do |question| %>
-    <ul>
-      <li><%= question.name %></li>
-    </ul>
+  <form action="/survey/<%=@survey.id%>" method="POST">
+    <% choiceCount = 0 %>
 
-    <form action="/survey/<%=@survey.id%>" method="POST">
-      <% question.choices.each do |choice| %>
-        <input type="radio" name="choice_id" value="<%= choice.id %>"><%= choice.name %><br>
-      <% end %>
-      <input type="hidden" name="survey_id" value="<%= @survey.id %>">
-      <input type="hidden" name="question_id" value="<%= question.id %>">
-      <input type="Submit">
-    </form>
-  <% end %>
+    <% @survey.questions.each do |question| %>
+      
+      <p><%= question.name %></p>
+      
+      <ul>
+
+        <% question.choices.each do |choice| %>
+          
+          <li><input type="radio" name="choices[<%=choiceCount%>]" value="<%= choice.id %>"><%= choice.name %></li>  
+        <% end %>
+        </ul><br>
+        <% choiceCount += 1 %>
+        <!-- <input type="hidden" name="question_id" value="<%= question.id %>"> -->
+    <% end %>
+
+    <input type="hidden" name="survey_id" value="<%= @survey.id %>">
+
+    <input type="Submit">
+  
+ </form>
+  
 </div>
