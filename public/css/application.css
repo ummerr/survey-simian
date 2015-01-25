@@ -1,8 +1,8 @@
 /* CSS declarations go here */
 
-font-family: 'Raleway', sans-serif;
+/*font-family: 'Raleway', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Slab', serif;*/
 
 
 h2, h3, h4, h5, h6 {
@@ -43,15 +43,15 @@ body {
     font-size: 160%;
     line-height: 160%;
     background-color: #ffffff;
+    background-image: url("/img/animal3-rotated-lightened.png");
+    background-repeat: no-repeat;
 }
 
 
 #content{
     width: 75%;
-    height: 800px;
     margin: 0 auto;
-    background-image: url("/img/animal3-rotated-lightened.png");
-    background-repeat: no-repeat;
+    height: 800px;
 }
 
 .title {

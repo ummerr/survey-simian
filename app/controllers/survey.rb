@@ -14,6 +14,7 @@ end
 post '/survey/create' do
   @survey = Survey.create
   @survey.title = params[:title]
+  questions = []
   question = Question.create(name: params[:question])
   @survey.questions << question
   current_user.created_surveys << @survey
