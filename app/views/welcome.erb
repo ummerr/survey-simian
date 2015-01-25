@@ -1,4 +1,21 @@
+<div class="login">
+  <a href="/login">Login</a>
+</div>
 
-<div id="login"><a href="/login">Login</a></div>
+<div class="login_form hidden">
+  <form action="/login" method="POST">
+  User Name<input type="text" name="user[name]">
+  <br>
+  Password<input type="password" name="user[password]">
+  <br>
+  <input type="submit" value="login">
+  </form>
+</div>
 
-<div id="signup"><a href="/signup">Signup</a></div>
+<div class="signup">
+  <a href="/signup">Sign Up</a>
+
+  <div class="signup_form hidden">
+  </div>
+
+</div>

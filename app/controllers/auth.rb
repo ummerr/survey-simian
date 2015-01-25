@@ -8,6 +8,7 @@ end
 
 get '/login' do
   erb :'auth/login'
+  redirect ('/survey')
 end
 
 post '/login' do

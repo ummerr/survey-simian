@@ -206,3 +206,21 @@ input[type=radio] {
     vertical-align: middle;
     margin-top: -6px;
 }
+
+.hidden {
+    display:none;
+}
+
+.login_form {
+    text-align:center;
+
+}
+
+.login {
+    text-align: center;
+}
+
+.signup {
+    text-align: center;
+}
+
