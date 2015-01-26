@@ -145,6 +145,7 @@ a:hover {
     width: 55%;
     float: left;
     text-align: left;
+    margin-top: 78px;
 }
 
 .create-survey-right{
@@ -159,6 +160,13 @@ a:hover {
     text-align: center;
     margin: 0 auto;
     padding-top: 40px;
+}
+
+.survey-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
 }
 
 li.surveys {
@@ -218,7 +226,10 @@ input[type=radio] {
 }
 
 .login {
+    width: 350px;
+    margin: 0 auto;
     text-align: center;
+    padding-top: 40px;
 }
 
 .signup {
