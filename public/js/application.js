@@ -1,26 +1,29 @@
 $(document).ready(function() {
 
   var choiceCounter = 0;
+  var questionCounter = 0;
 
   $('.add_question').click(function(event) {
     event.preventDefault();
 
-      $('.question').css("visibility", "visible");
+      $('.questions').append("<div>Question: <input type='text' name=''</div>");
+      $('input').last().prop('name', "questions[question_" + questionCounter + "]");
       $('.add_choice').css("visibility", "visible");
+
+      questionCounter++;
   })
 
   $('.add_choice').click(function(event){
     event.preventDefault();
 
-      var $choice = $('.choice');
-      // $choice.first().clone().appendTo( ".choices" ).css("visibility", "visible");
-      // $('input').last().prop('name', "choices[choice_" + choiceCounter + "]");
-      $('.choices').append("<div>Choice: <input type='text' name=''</div>");
-      $('input').last().prop('name', "choices[choice_" + choiceCounter + "]");
+      $('.questions').append("<div>Choice: <input class='.choice' type='text' name=''</div>");
+      $('input').last().prop('name', "choices[question_" + (questionCounter-1) + "][choice_" + choiceCounter + "]");
 
       choiceCounter++;
 
   })
+
+  // $('input').last().prop('name', "choices[choice_" + choiceCounter + "]");
 
   $('.login').on("click",function(event){
     event.preventDefault();
