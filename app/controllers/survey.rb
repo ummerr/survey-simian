@@ -12,25 +12,17 @@ get '/survey/create' do
 end
 
 post '/survey/create' do
-  
   @survey = Survey.create
   @survey.title = params[:title]
-  # questions = []
-  
-
   params[:questions].each do |question_num, question_value|
     @survey.questions << Question.create(name: question_value)
     choices = []
     choices << params[:choices][question_num.to_sym].map { |key, choice| Choice.create(name: choice) }
     @survey.questions.last.choices << choices
   end
-  # question = Question.create(name: params[:question])
-  # @survey.questions << question
-  # current_user.created_surveys << @survey
-  # choices = []
-  # params[:choices].each { |key, value| choices << Choice.create(name: value) }
-  # @survey.questions.first.choices << choices  # Only supports survey with one question, add functionality here to support multiple questions.
+  
   @survey.save
+
   redirect("/survey/#{@survey.id}")
 end
 
@@ -48,5 +40,6 @@ post '/survey/:id' do
   params[:choices].each do |key, choice_id|
     Answer.create(choice_id: choice_id.to_i, user_id: current_user.id)
   end
+  
   redirect("/survey/#{params[:survey_id]}/results")
 end

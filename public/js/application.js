@@ -23,7 +23,6 @@ $(document).ready(function() {
 
   })
 
-  // $('input').last().prop('name', "choices[choice_" + choiceCounter + "]");
 
   $('.login').on("click",function(event){
     event.preventDefault();
